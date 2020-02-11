@@ -44,12 +44,13 @@ def front_x(words):
     words.sort()
     x_word_list = []
     other_word_list = []
+    new_list = []
     for word in words:
         if word[0] == ('x'):
             x_word_list.append(word)
         else:
             other_word_list.append(word)
-            new_list = x_word_list + other_word_list
+        new_list = x_word_list + other_word_list
     return new_list
         
     
