@@ -25,8 +25,12 @@
 
 
 def match_ends(words):
-    """Your code goes here.  Edit this docstring."""
-    return
+    counter = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            counter += 1
+    return counter
+            
 
 
 # B. front_x
@@ -37,8 +41,22 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-    """Your code goes here.  Edit this docstring."""
-    return
+    words.sort()
+    x_word_list = []
+    other_word_list = []
+    for word in words:
+        if word[0] == ('x'):
+            x_word_list.append(word)
+        else:
+            other_word_list.append(word)
+            new_list = x_word_list + other_word_list
+    return new_list
+        
+    
+            #other_word_list = words.remove(x_word_list)
+
+                
+       
 
 
 # C. sort_last
